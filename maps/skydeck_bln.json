@@ -3077,7 +3077,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"\/src\/skydeck_bln.ts"
+         "value":"..\/src\/skydeck_bln.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.9.2",
