@@ -27,6 +27,6 @@ WA.onInit().then(async () => {
 }).catch(e => console.error(e));
 
 function playSound() {
-  var elevatorSoundInit = WA.sound.loadSound("../resources/elevatorSound.mp3");
+  var elevatorSoundInit = WA.sound.loadSound("resources/elevatorSound.mp3");
   elevatorSoundInit.play();
 }
