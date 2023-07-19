@@ -2,10 +2,14 @@ import { } from "https://unpkg.com/@workadventure/scripting-api-extra@^1";
 
 console.log("Script started successfully")
 
-WA.onInit().then(async () => {
-  console.log('Position: ', await WA.player.getPosition());
+var startAreaX = 2500;
 
-  playSound();
+WA.onInit().then(async () => {
+  var position = await WA.player.getPosition();
+  
+  if (position.x > startAreaX) {
+    playSound();
+  }
 
   WA.state.onVariableChange("npc1").subscribe(async (value) => {
     console.log(WA.state.npc1)
@@ -23,6 +27,6 @@ WA.onInit().then(async () => {
 }).catch(e => console.error(e));
 
 function playSound() {
-  var elevatorSoundInit = WA.sound.loadSound("../maps/resources/elevatorSound.mp3");
+  var elevatorSoundInit = WA.sound.loadSound("../resources/elevatorSound.mp3");
   elevatorSoundInit.play();
 }
