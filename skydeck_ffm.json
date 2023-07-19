@@ -15259,7 +15259,7 @@
         {
          "name":"script",
          "type":"string",
-         "value":"..\/src\/skydeck_ffm.js"
+         "value":"src\/skydeck_ffm.js"
         }],
  "renderorder":"right-down",
  "tiledversion":"1.10.1",
